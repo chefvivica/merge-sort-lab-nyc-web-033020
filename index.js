@@ -6,7 +6,7 @@ function findMinAndRemoveSorted(arr) {
       min = arr[i]
       index = i
     }
-    arr.slice(index,1)
+    arr.splice(index,1)
     return min
   }
 }
