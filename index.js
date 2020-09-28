@@ -12,14 +12,15 @@ function findMinAndRemoveSorted(arr) {
 }
 
 
-function merge(arr1, arr2){
-  let first = arr1[0]
-  let second = arr2[0]
-  if(first < second){
-    sorted.push(first)
-  }else{
-    sorted.push(second)
-  }
 
-  
+function merge(firstSubarray, secondSubArray){
+  let sorted = []
+  while(firstSubarray.length != 0 && secondSubArray.length != 0){
+    if(firstSubarray[0] < secondSubArray[0]){
+      sorted.push(findMinAndRemoveSorted(firstSubarray))
+    } else {
+      sorted.push(findMinAndRemoveSorted(secondSubArray))
+    }
+  }
+  return sorted.concat(firstSubarray).concat(secondSubArray)
 }
