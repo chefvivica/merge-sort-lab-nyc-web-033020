@@ -13,9 +13,8 @@ function findMinAndRemoveSorted(arr) {
 
 
 function merge(arr1, arr2){
-  let sorted = []
-  let first = arr1.shift()
-  let second = arr2.shift()
+  let first = arr1[0]
+  let second = arr2[0]
   if(first < second){
     sorted.push(first)
   }else{
