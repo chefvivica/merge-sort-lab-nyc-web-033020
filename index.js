@@ -20,6 +20,6 @@ function merge(arr1, arr2){
   }else{
     sorted.push(second)
   }
-  return sorted.concat(merge(arr1, arr2))
+
   
 }
