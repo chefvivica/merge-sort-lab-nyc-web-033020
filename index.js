@@ -33,6 +33,6 @@ function mergeSort(arr) {
   if(arr.length <2){
    return arr
   }else{
-    return merge(mergeSort(first, second))
+    return merge(mergeSort(first), mergeSort(second))
   }
 }
