@@ -10,3 +10,17 @@ function findMinAndRemoveSorted(arr) {
     return min
   }
 }
+
+
+function merge(arr1, arr2){
+  let sorted = []
+  let first = arr1.shift()
+  let second = arr2.shift()
+  if(first < second){
+    sorted.push(first)
+  }else{
+    sorted.push(second)
+  }
+  return sorted.concat(merge(arr1, arr2))
+  
+}
