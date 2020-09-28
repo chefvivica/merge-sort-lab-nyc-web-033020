@@ -24,3 +24,15 @@ function merge(firstSubarray, secondSubArray){
   }
   return sorted.concat(firstSubarray).concat(secondSubArray)
 }
+
+function mergeSort(arr) {
+  let mid = arr.length/2 
+  let first = arr.slice(0, mid)
+  let second = arr.slice(mid, arr.length)
+  
+  if(arr.length <2){
+   return arr
+  }else{
+    return merge(mergeSort(first, second))
+  }
+}
